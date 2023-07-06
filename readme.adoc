@@ -1,0 +1,3 @@
+=                         *AIO*
+
+A personal project with all possible tech stack included which comes in handy developing spring boot app and API
