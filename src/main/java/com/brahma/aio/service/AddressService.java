@@ -16,11 +16,13 @@ public class AddressService {
         this.addressRepository = addressRepository;
     }
 
-//    public void saveAddress(Address address) {
-//        addressRepository.save(address);
-//    }
 
     public void saveAllAddress(List<Address> address) {
         addressRepository.saveAll(address);
+        System.out.println(address);
+    }
+
+    public List<Address> getAllAddress(){
+        return  addressRepository.findAll();
     }
 }
