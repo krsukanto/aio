@@ -26,8 +26,8 @@ public class GetStuffs {
     @Autowired
     GetAddress getAddress;
 
-    @Autowired
-    AddressService addressService;
+    // @Autowired
+    // AddressService addressService;
 
 
     @GetMapping("/beer/{number}")
@@ -48,10 +48,11 @@ public class GetStuffs {
         List<Address> resultAddress=new ArrayList<Address>();
         if(sn<=1){
             resultAddress.add(getRandomStuffs.getOneAddress());
-            addressService.saveAllAddress(resultAddress);
+            // addressService.saveAllAddress(resultAddress);
         }
         else{
-            addressService.saveAllAddress(getRandomStuffs.getAddress(sn));
+            return getRandomStuffs.getAddress(sn);
+            // addressService.saveAllAddress(getRandomStuffs.getAddress(sn));
         }
         return resultAddress;
     }

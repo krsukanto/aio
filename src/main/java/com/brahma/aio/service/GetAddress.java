@@ -13,10 +13,10 @@ import java.util.List;
 
 @Service
 public class GetAddress {
-
+    @Autowired
     private final WebClient.Builder webClientBuilder;
 
-    @Autowired
+    
     public GetAddress(WebClient.Builder webClientBuilder) {
         this.webClientBuilder = webClientBuilder;
     }
